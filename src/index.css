@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+:root {
+  color-scheme: light;
+  
+  /* Crisp White Foundation as requested */
+  --bg-main: #ffffff;
+  --bg-subtle: #fafafa;
+  --bg-card: #ffffff;
+  --border-color: #f0f0f2;
+  --border-subtle: #f4f4f6;
+  
+  --text-primary: #18181b;     /* zinc-900 */
+  --text-secondary: #52525b;   /* zinc-600 */
+  --text-muted: #71717a;       /* zinc-500 */
+  --text-faint: #a1a1aa;       /* zinc-400 */
+
+  /* Default Pastel Sage */
+  --pastel-accent: #2d6a4f;
+  --pastel-hover: #1b4332;
+  --pastel-subtle: #edf6f1;
+  --pastel-border: #d2e8dc;
+  --pastel-badge-text: #20503b;
+  --pastel-ring: rgba(45, 106, 79, 0.15);
+}
+
+[data-pastel-theme="sage"] {
+  --pastel-accent: #2d6a4f;
+  --pastel-hover: #1b4332;
+  --pastel-subtle: #edf6f1;
+  --pastel-border: #d2e8dc;
+  --pastel-badge-text: #20503b;
+  --pastel-ring: rgba(45, 106, 79, 0.15);
+}
+
+[data-pastel-theme="lavender"] {
+  --pastel-accent: #6b46c1;
+  --pastel-hover: #553c9a;
+  --pastel-subtle: #f6f2fc;
+  --pastel-border: #e6daf7;
+  --pastel-badge-text: #50319a;
+  --pastel-ring: rgba(107, 70, 193, 0.15);
+}
+
+[data-pastel-theme="sky"] {
+  --pastel-accent: #0284c7;
+  --pastel-hover: #0369a1;
+  --pastel-subtle: #f0f7ff;
+  --pastel-border: #d0e6fb;
+  --pastel-badge-text: #0369a1;
+  --pastel-ring: rgba(2, 132, 199, 0.15);
+}
+
+[data-pastel-theme="peach"] {
+  --pastel-accent: #c05621;
+  --pastel-hover: #9c4221;
+  --pastel-subtle: #fef5ee;
+  --pastel-border: #fedec5;
+  --pastel-badge-text: #9c4221;
+  --pastel-ring: rgba(192, 86, 33, 0.15);
+}
+
+[data-pastel-theme="rose"] {
+  --pastel-accent: #db2777;
+  --pastel-hover: #be185d;
+  --pastel-subtle: #fdf2f6;
+  --pastel-border: #f9d0e1;
+  --pastel-badge-text: #9d174d;
+  --pastel-ring: rgba(219, 39, 119, 0.15);
+}
+
+[data-pastel-theme="mint"] {
+  --pastel-accent: #0f766e;
+  --pastel-hover: #115e59;
+  --pastel-subtle: #f0fdf9;
+  --pastel-border: #cbf3e6;
+  --pastel-badge-text: #115e59;
+  --pastel-ring: rgba(15, 118, 110, 0.15);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Pastel Badge & Tag styles */
+.pastel-pill {
+  background-color: var(--pastel-subtle);
+  border: 1px solid var(--pastel-border);
+  color: var(--pastel-badge-text);
+  transition: all 0.15s ease;
+}
+
+.pastel-pill:hover {
+  border-color: var(--pastel-accent);
+}
+
+.pastel-accent-text {
+  color: var(--pastel-accent);
+}
+
+.pastel-accent-bg {
+  background-color: var(--pastel-accent);
+  color: #ffffff;
+}
+
+.pastel-accent-bg:hover {
+  background-color: var(--pastel-hover);
+}
+
+.pastel-subtle-box {
+  background-color: var(--pastel-subtle);
+  border: 1px solid var(--pastel-border);
+}
+
+/* Clean Ruled Lines */
+.ruled-line {
+  border-color: #f0f0f2;
+}
+
+/* Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e4e4e7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
