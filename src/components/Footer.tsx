@@ -131,7 +131,7 @@ export const Footer: React.FC<FooterProps> = ({
           title='Buy me a coffee'
           onClick={onOpenCoffee}
           aria-label="Buy me a coffee"
-          className="fixed bottom-6 right-0 z-50 flex items-center bg-white shadow-lg shadow-black/10 transition-transform duration-300 ease-out group hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20"
+          className="fixed bottom-6 cursor-pointer right-0 z-50 flex items-center bg-white shadow-lg shadow-black/10 transition-transform duration-300 ease-out group hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20"
           style={{
             borderColor: `${currentThemeConfig.accentHex}`,
             borderTopLeftRadius: "1.25rem",

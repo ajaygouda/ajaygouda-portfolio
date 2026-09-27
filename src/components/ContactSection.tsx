@@ -134,7 +134,7 @@ export const ContactSection: React.FC = () => {
                     className="inline-flex items-center gap-1.5 text-xs text-zinc-800 hover:text-zinc-950 font-medium font-mono"
                   >
                     <Download className="w-3 h-3 text-zinc-500" />
-                    <span>Download Original Resume (PDF)</span>
+                    <span>Download Resume (PDF)</span>
                   </a>
                   <a
                     href={PERSONAL_INFO.linkedin}

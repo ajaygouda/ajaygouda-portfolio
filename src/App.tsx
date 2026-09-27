@@ -59,6 +59,10 @@ export default function App() {
     trackPageView(page);
   };
 
+  const handleRazorpayPayment = ()=>{
+    window.open("https://razorpay.me/@ajaygouda", "_blank", "noopener,noreferrer");
+  }
+
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-white text-zinc-900 flex flex-col antialiased selection:bg-zinc-900 selection:text-white">
@@ -67,7 +71,7 @@ export default function App() {
           currentPage={currentPage}
           onNavigate={handleNavigate}
           onOpenResume={() => setResumeModalOpen(true)}
-          onOpenCoffee={() => setCoffeeModalOpen(true)}
+          onOpenCoffee={handleRazorpayPayment}
           onOpenAnalytics={() => setAnalyticsModalOpen(true)}
           onOpenSchedule={() => setScheduleModalOpen(true)}
         />
@@ -78,7 +82,7 @@ export default function App() {
             <HomePage
               onNavigate={handleNavigate}
               onOpenResume={() => setResumeModalOpen(true)}
-              onOpenCoffee={() => setCoffeeModalOpen(true)}
+              onOpenCoffee={handleRazorpayPayment}
               onOpenSchedule={() => setScheduleModalOpen(true)}
             />
           )}
@@ -95,7 +99,7 @@ export default function App() {
         {/* Minimal Editorial Footer */}
         <Footer
           onNavigate={handleNavigate}
-          onOpenCoffee={() => setCoffeeModalOpen(true)}
+          onOpenCoffee={handleRazorpayPayment}
           onOpenAnalytics={() => setAnalyticsModalOpen(true)}
           onOpenResume={() => setResumeModalOpen(true)}
         />
